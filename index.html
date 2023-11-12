@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Programacion, Academia, Cursos, Carrera, IT">
+    <meta name="description"
+        content="La mejor Academia de Latino-America, donde vas a poder formarte en el mundo de la programacion">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css?1.0" media="all">
+    <link rel="shortcut icon" href="" />
+    <title>Focus Security Academy</title>
+</head>
+<body>
+    <section class="welcome">
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Comienza tu carrera en el mundo de la programacion</h1>
+
+        <section class="benefits">
+            <div class="benefit">
+                <h2>La mejor atención post clases</h2>
+                <p>Nuestros tutores están disponibles para ayudarte después de las clases.</p>
+            </div>
+            <div class="benefit">
+                <h2>Métodos de pagos fáciles</h2>
+                <p>Aceptamos diversos métodos de pago para tu comodidad.</p>
+            </div>
+            <div class="benefit">
+                <h2>Conexión con empresas de alto nivel</h2>
+                <p>Te conectamos con oportunidades laborales en empresas de prestigio.</p>
+            </div>
+            <div class="benefit">
+                <h2>Cursos intensivos o flexibles</h2>
+                <p>Elige entre cursos intensivos o flexibles para adaptarte a tu horario.</p>
+            </div>
+        </section>
+    </section>
+
+    <section class="level-up">
+        <h2>Haz tu nivelación y te recomendaremos cursos:</h2>
+        <form>
+            <div id="primerContenedor">
+                <h3>Pregunta 1: Frontend</h3>
+                <p>¿Qué lenguaje se utiliza para crear la estructura y el contenido de una página web?</p>
+                <button type="button" id="trueRespuesta">HTML</button>
+                <button type="button">CSS</button>
+                <button type="button">JavaScript</button>
+            </div>
+            
+            <div id="SegundoContenedor">
+                <h3>Pregunta 2: Backend</h3>
+                <p>¿Qué tipo de tecnología se utiliza para administrar una base de datos en el lado del servidor?</p>
+                <button type="button">PHP</button>
+                <button type="button" id="trueRespuesta">SQL</button>
+                <button type="button">Java</button>
+            </div>
+            
+            <div id="tercerContenedor">
+                <h3>Pregunta 3: Programación web</h3>
+                <p>¿Cuál de las siguientes opciones es un marco de trabajo (framework) de desarrollo web ampliamente utilizado?</p>
+                <button type="button" id="trueRespuesta">React</button>
+                <button type="button">Microsoft Excel</button>
+                <button type="button">Microsoft Paint</button>
+            </div>
+
+            <div id="cuartoContenedor">
+                <h3>Pregunta 4: Lenguajes de programación</h3>
+                <p>¿Cuál de estos lenguajes de programación se utiliza comúnmente para el desarrollo de aplicaciones móviles?</p>
+                <button type="button">Java</button>
+                <button type="button">Python</button>
+                <button type="button" id="trueRespuesta">C#</button>
+            </div>
+
+            <div id="quintoContenedor">
+            <h3>Pregunta 5: Diseño web</h3>
+                <p>¿Qué lenguaje se utiliza para definir el diseño y la presentación de una página web?</p>
+                <button type="button" id="trueRespuesta">CSS</button>
+                <button type="button">HTML</button>
+                <button type="button">JavaScript</button>
+            </div>
+            <button type="button" id="button">Enviar respuestas</button>
+        </form>
+    </section>
+
+     <h1 id="titulo">Cursos recomendados segun tu Nivel</h1>
+    <div id="contenedor-cursos" ></div>
+    
+    <button id="boton">Cursos Front End</button>
+    <div id="contenedor3"></div>
+
+    <footer>
+        <p>&copy; 2023 Focus Security Academy</p>
+    </footer>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/EaselPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/PixiPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+
+<!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/EasePack.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
+</body>
+</html>
