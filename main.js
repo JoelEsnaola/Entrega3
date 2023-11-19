@@ -1,11 +1,13 @@
-function Cursos(curso, precio) {
-  this.curso = curso;
-  this.precio = precio;
+class Curso{
+  constructor(curso, precio) {
+    this.curso = curso;
+    this.precio = precio;
+  }
 }
 
-const Curso1 = new Cursos('desarrollo', 1200);
-const Curso2 = new Cursos('js', 1300);
-const Curso3 = new Cursos('react', 1400);
+const Curso1 = new Curso('desarrollo', 1200);
+const Curso2 = new Curso('js', 1300);
+const Curso3 = new Curso('react', 1400);
 
 const cursosArray = [Curso1, Curso2, Curso3];
 
@@ -172,7 +174,5 @@ function mostrarCursos() {
     });
     
     tl.play();
-  
-  
+   
 }
-
