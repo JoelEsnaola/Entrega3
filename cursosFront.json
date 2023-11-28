@@ -1,0 +1,31 @@
+[
+    {
+     "Nombre": "Fundamentos del Desarrollo Web Front End",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Desarrollo Avanzado con Tecnologías Emergentes",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Desarrollo Interactivo con JavaScript y jQuery",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Desarrollo Avanzado de Aplicaciones SPA con Vue.js",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Arquitecturas Front End Escalables con GraphQL y Apollo",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Programación Reactiva con React.js para Principiantes",
+    "Precio": "$200" 
+    }
+]

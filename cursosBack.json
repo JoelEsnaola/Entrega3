@@ -1,0 +1,32 @@
+
+[
+    {
+     "Nombre": "Introducción al Back End",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Back End Profesional con Node.js",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Introducción al Desarrollo Serverless",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Fundamentos de Bases de Datos Relacionales para Desarrolladores",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Desarrollo de APIs RESTful con Express.js",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Arquitecturas Escalables para Aplicaciones Empresariales",
+    "Precio": "$200" 
+    }
+]

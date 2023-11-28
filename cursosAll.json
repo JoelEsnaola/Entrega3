@@ -1,0 +1,61 @@
+[
+    {
+     "Nombre": "Fundamentos del Desarrollo Web Front End",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Desarrollo Avanzado con Tecnologías Emergentes",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Desarrollo Interactivo con JavaScript y jQuery",
+    "Precio": "$200" 
+    },
+
+    {
+        "Nombre": "Introducción al Back End",
+       "Precio": "$200" 
+       },
+       
+       {
+        "Nombre": "Back End Profesional con Node.js",
+       "Precio": "$200" 
+       },
+       
+       {
+        "Nombre": "Introducción al Desarrollo Serverless",
+       "Precio": "$200" 
+       },
+       
+       {
+        "Nombre": "Fundamentos de Bases de Datos Relacionales para Desarrolladores",
+       "Precio": "$200" 
+       },
+       
+       {
+        "Nombre": "Desarrollo de APIs RESTful con Express.js",
+       "Precio": "$200" 
+       },
+       
+       {
+        "Nombre": "Arquitecturas Escalables para Aplicaciones Empresariales",
+       "Precio": "$200" 
+       },
+    
+    {
+     "Nombre": "Desarrollo Avanzado de Aplicaciones SPA con Vue.js",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Arquitecturas Front End Escalables con GraphQL y Apollo",
+    "Precio": "$200" 
+    },
+    
+    {
+     "Nombre": "Programación Reactiva con React.js para Principiantes",
+    "Precio": "$200" 
+    }
+]
