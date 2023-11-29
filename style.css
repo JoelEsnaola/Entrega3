@@ -288,8 +288,8 @@ body {
 }
 
 .card7{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     border: 2px solid rgb(24, 153, 78);
     border-radius: 10px;
     background-color: gray;
@@ -353,4 +353,9 @@ body {
     font-size: 23px;
     margin-bottom: 2%;
     margin-top: 2%;
+}
+
+.card7 img {
+    height: 50px;
+    width: 50px;
 }
