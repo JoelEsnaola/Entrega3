@@ -135,6 +135,132 @@ function mostrarCursos() {
 
 
 let comments = document.getElementById('comments');
-comments.innerHTML = '<h2>Comentarios de nuestros alumnos</h2>';
+comments.innerHTML = '<h2>COMENTARIOS DE NUESTROS ALUMNOS</h2>';
 comments.classList.add('centrado');
 
+document.addEventListener('DOMContentLoaded', () => {
+  cargarCards();
+
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 35,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      stopOnLastSlide: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+
+  const form = document.getElementById('commentForm');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    agregarComentario();
+  });
+});
+
+function cargarCards() {
+  const contenedorCards = document.getElementById('contenedor-cardsjs');
+  const cardsPreestablecidas = obtenerCardsPreestablecidas();
+  const cardsDesdeLocalStorage = obtenerCardsDesdeLocalStorage();
+
+  cardsPreestablecidas.concat(cardsDesdeLocalStorage).forEach(cardInfo => {
+    const card = crearCard(cardInfo);
+    contenedorCards.appendChild(card);
+  });
+}
+
+function obtenerCardsPreestablecidas() {
+  return [
+    {
+      nombre: "Jose",
+      apellido: "Sosa",
+      titulo: "Quede encantado con el curso de React",
+      comentario: "Fue un curso muy basto de información, lo cual me ayudó mucho a progresar mis habilidades como programador. Excelente servicio por parte de Focus Security",
+      fecha: "14/02/2023"
+    },
+    {
+      nombre: "Joel",
+      apellido: "Esnaola",
+      titulo: "Introducción al Back End",
+      comentario: "Muy bueno el curso. Hace tiempo que quería aprender back para poder ser Full stack y con esto mis comienzos en el back son geniales. Gracias Focus Security",
+      fecha: "03/09/2023"
+    },
+    {
+      nombre: "Maria",
+      apellido: "Sosa",
+      titulo: "Estoy comenzando en el mundo de la programación",
+      comentario: "Soy iniciada en este mundo, salí de la secundaria sin saber qué estudiar y vi Focus Security y todos sus cursos de programación. Decidí arrancar y ahora estoy súper entusiasmada con mi progreso. 10 / 10 Focus Security",
+      fecha: "23/11/2023"
+    }
+  ];
+}
+
+function obtenerCardsDesdeLocalStorage() {
+  const cardsEnLocalStorage = JSON.parse(localStorage.getItem('cards')) || [];
+  return cardsEnLocalStorage;
+}
+
+function crearCard(cardInfo) {
+  const card = document.createElement('div');
+  card.className = 'swiper-slide cardjs';
+  card.innerHTML = `
+      <div class="card1">
+          <div class="usuario">
+              <img src="./imgs/225-2255668_icono-iconos-de-personas-solas.png" alt="perfil">
+              <p>${cardInfo.nombre} ${cardInfo.apellido}</p>
+              <p>${cardInfo.fecha}</p>
+          </div>
+          <div class="comentario">
+              <h2>"${cardInfo.titulo}"</h2>
+              <p>${cardInfo.comentario}</p>
+          </div>
+      </div>
+  `;
+  return card;
+}
+
+function agregarComentario() {
+  const nombre = document.getElementById('nombre').value;
+  const apellido = document.getElementById('apellido').value;
+  const titulo = document.getElementById('tituloComment').value;
+  const comentario = document.getElementById('comentario').value;
+
+  const nuevaCard = {
+    nombre,
+    apellido,
+    titulo,
+    comentario,
+    fecha: obtenerFechaActual()
+  };
+
+  const cardsEnLocalStorage = obtenerCardsDesdeLocalStorage();
+  cardsEnLocalStorage.push(nuevaCard);
+  localStorage.setItem('cards', JSON.stringify(cardsEnLocalStorage));
+
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "Gracias por tu comentario",
+    showConfirmButton: false,
+    timer: 1500
+  });
+
+  const contenedorCards = document.getElementById('contenedor-cardsjs');
+  contenedorCards.innerHTML = '';
+  cargarCards();
+
+  document.getElementById('nombre').value = '';
+  document.getElementById('apellido').value = '';
+  document.getElementById('tituloComment').value = '';
+  document.getElementById('comentario').value = '';
+}
+
+function obtenerFechaActual() {
+  const fecha = new Date();
+  return `${fecha.getDate()}/${fecha.getMonth() + 1}/${fecha.getFullYear()}`;
+}

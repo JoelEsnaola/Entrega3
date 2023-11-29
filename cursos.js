@@ -35,9 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${cursoInfo.imagen}" alt="x"> 
                     <h2>${cursoInfo.Nombre}</h2>
                     <p>${cursoInfo.Precio}</p>
+                    <button>Buy</button>
                 `;
                 cursoActual.classList.add('card7')
                 curso.appendChild(cursoActual);
+
+                animarTarjeta(cursoActual);
             });
         })
         .catch(error => console.error('Error al cargar el archivo JSON:', error));
@@ -126,14 +129,14 @@ backCursos.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const curso = document.getElementById('Cursos');
 
-    const cargarYAnimarCursos = (query = '') => {
+    const cargarYAnimarCursos = (consulta) => {
         fetch("./cursosAll.json")
             .then(response => response.json())
             .then(data => {
                 curso.innerHTML = '';
 
                 const resultados = data.filter(cursoInfo =>
-                    cursoInfo.Nombre.toLowerCase().includes(query.toLowerCase())
+                    cursoInfo.Nombre.toLowerCase().includes(consulta.toLowerCase())
                 );
 
                 resultados.forEach(cursoInfo => {
@@ -148,13 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     cursoActual.classList.add('card7')
                     curso.appendChild(cursoActual);
 
-                    animarTarjeta(cursoActual);
                 });
             })
             .catch(error => console.error('Error al cargar el archivo JSON:', error));
     };
-    
-    cargarYAnimarCursos();
+
+   
 
     const inputBusqueda = document.getElementById('busqueda');
     inputBusqueda.addEventListener('input', () => {

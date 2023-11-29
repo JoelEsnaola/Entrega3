@@ -279,12 +279,15 @@ body {
     gap: 10%;
     flex-wrap: wrap;
     justify-content: space-around;
+    border-left: 4px solid rgb(24, 153, 78);
 }
 
 #busqueda {
     background-color: #FFF5E1;
-    padding: 3px;
+    padding: 5px;
     width: 200px;
+    border-radius: 10px;
+    border: none;
 }
 
 .card7{
@@ -297,6 +300,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 3%;
+    padding: 1%;
 }
 
 .card1 div img {
@@ -351,11 +356,141 @@ body {
 .centrado {
     margin-left: 3%;
     font-size: 23px;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    margin-bottom: 8%;
+    margin-top: 8%;
 }
 
 .card7 img {
-    height: 50px;
-    width: 50px;
+    height: 150px;
+    width: 200px;
+    border: 2px solid rgb(7, 109, 49);
+    border-radius: 3px;
 }
+
+footer {
+    background-color: #333;
+}
+
+#cursosFront{
+    background-color: rgb(24, 153, 78);
+    border-radius: 30px;
+    border: none;
+    color: #FFF5E1;
+    transition: 800ms;
+    width: 143px;
+    height: 52px;
+}
+#cursosBack{
+    background-color: rgb(24, 153, 78);
+    width: 143px;
+    height: 52px;
+    border-radius: 30px;
+    border: none;
+    color: #FFF5E1;
+    transition: 800ms;
+}
+#allCursos {
+    background-color: rgb(24, 153, 78);
+    width: 143px;
+    height: 52px;
+    border-radius: 30px;
+    border: none;
+    color: #FFF5E1;
+    transition: 800ms;
+}
+
+#cursosFront:hover{
+    transition: 800ms;
+    color: black;
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 155px;
+}
+#cursosBack:hover{
+    transition: 800ms;
+    color: black;
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 155px;
+}
+#allCursos:hover{
+    transition: 800ms;
+    color: black;
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 155px;
+}
+
+#tarjetas_comentarios {
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+/* Formulario */
+#formulario {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 20px;
+    margin-bottom: 8%;
+    margin-top: 8%;
+}
+
+.tituloForm {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tituloForm p {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+#commentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 0.9em;
+    margin-top: 15px;
+    color: #555;
+}
+
+input,
+textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.envioComment {
+    background-color: rgb(24, 153, 78);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.envioComment:hover {
+    background-color: rgb(7, 109, 49);
+}
+
+hr {
+    border: 1px solid #555;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 0 20px rgba(4, 4, 4, 4);
+}
+
